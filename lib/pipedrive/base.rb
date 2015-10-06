@@ -15,7 +15,7 @@ module Pipedrive
   class Base < OpenStruct
 
     include HTTParty
-    
+
     base_uri 'api.pipedrive.com/v1'
     headers HEADERS
     format :json
@@ -84,7 +84,7 @@ module Pipedrive
         attrs['data'].is_a?(Array) ? attrs['data'].map {|data| self.new( 'data' => data ) } : []
       end
 
-      def all(response = nil, options={},get_absolutely_all=false)
+      def all(response = nil, options = {}, get_absolutely_all = false)
         res = response || get(resource_path, options)
         if res.ok?
           data = res['data'].nil? ? [] : res['data'].map{|obj| new(obj)}
@@ -94,7 +94,7 @@ module Pipedrive
           end
           data
         else
-          bad_response(res,attrs)
+          bad_response(res, options)
         end
       end
 
@@ -107,7 +107,7 @@ module Pipedrive
           bad_response(res,opts)
         end
       end
-      
+
       def find(id)
         res = get "#{resource_path}/#{id}"
         res.ok? ? new(res) : bad_response(res,id)
