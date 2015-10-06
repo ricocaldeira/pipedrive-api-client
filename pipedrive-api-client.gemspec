@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "pipedrive-api-client"
-  s.version = "0.3.3"
+  s.version = "0.3.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Bj\u{f6}rn Lennartsson", "Jan Schwenzien", "Waldemar Kusnezow", "Joel Courtney"]
@@ -49,7 +49,7 @@ Gem::Specification.new do |s|
     "lib/pipedrive/user-connection.rb",
     "lib/pipedrive/user-setting.rb",
     "lib/pipedrive/user.rb",
-    "pipedrive-ruby.gemspec",
+    "pipedrive-api-client.gemspec",
     "test/data/create_deal_body.json",
     "test/data/create_note_body.json",
     "test/data/create_organization_body.json",
