@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
     "README.md",
     "Rakefile",
     "VERSION",
-    "lib/pipedrive-ruby.rb",
+    "lib/pipedrive-api-client.rb",
     "lib/pipedrive/activity-type.rb",
     "lib/pipedrive/activity.rb",
     "lib/pipedrive/authorization.rb",
