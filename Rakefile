@@ -14,13 +14,13 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "pipedrive-ruby"
-  gem.homepage = "https://github.com/GeneralScripting/pipedrive-ruby.git"
+  gem.name = "pipedrive-api-client"
+  gem.homepage = "https://github.com/boena/pipedrive-api-client.git"
   gem.license = "MIT"
   gem.summary = %Q{Ruby wrapper for the Pipedrive API}
   gem.description = %Q{Ruby wrapper for the Pipedrive API}
-  gem.email = "jan@general-scripting.com"
-  gem.authors = ["Jan Schwenzien", "Waldemar Kusnezow", "Joel Courtney"]
+  gem.email = "bjorn@ratherunique.se"
+  gem.authors = ["Björn Lennartsson", "Jan Schwenzien", "Waldemar Kusnezow", "Joel Courtney"]
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -39,7 +39,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "pipedrive-rails #{version}"
+  rdoc.title = "pipedrive-api-client #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

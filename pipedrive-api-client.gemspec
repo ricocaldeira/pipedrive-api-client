@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "pipedrive-ruby"
+  s.name = "pipedrive-api-client"
   s.version = "0.3.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Jan Schwenzien", "Waldemar Kusnezow", "Joel Courtney"]
+  s.authors = ["Bj\u{f6}rn Lennartsson", "Jan Schwenzien", "Waldemar Kusnezow", "Joel Courtney"]
   s.date = "2015-10-06"
   s.description = "Ruby wrapper for the Pipedrive API"
-  s.email = "jan@general-scripting.com"
+  s.email = "bjorn@ratherunique.se"
   s.extra_rdoc_files = [
     "README.md"
   ]
@@ -54,14 +54,16 @@ Gem::Specification.new do |s|
     "test/data/create_note_body.json",
     "test/data/create_organization_body.json",
     "test/data/create_person_body.json",
+    "test/data/create_stages_body.json",
     "test/helper.rb",
     "test/test_pipedrive_authentication.rb",
     "test/test_pipedrive_deal.rb",
     "test/test_pipedrive_note.rb",
     "test/test_pipedrive_organization.rb",
-    "test/test_pipedrive_person.rb"
+    "test/test_pipedrive_person.rb",
+    "test/test_pipedrive_stage.rb"
   ]
-  s.homepage = "https://github.com/GeneralScripting/pipedrive-ruby.git"
+  s.homepage = "https://github.com/boena/pipedrive-api-client.git"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "2.0.0"
