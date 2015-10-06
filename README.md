@@ -1,17 +1,16 @@
-# pipedrive-ruby
+# pipedrive-api-client
 
-[![Gem Version](https://badge.fury.io/rb/pipedrive-ruby.png)](http://badge.fury.io/rb/pipedrive-ruby)
-[![Code Climate](https://codeclimate.com/github/GeneralScripting/pipedrive-ruby.png)](https://codeclimate.com/github/GeneralScripting/pipedrive-ruby)
-[![Build Status](https://travis-ci.org/GeneralScripting/pipedrive-ruby.png?branch=master)](https://travis-ci.org/GeneralScripting/pipedrive-ruby)
-[![Coverage Status](https://coveralls.io/repos/GeneralScripting/pipedrive-ruby/badge.png?branch=master)](https://coveralls.io/r/GeneralScripting/pipedrive-ruby?branch=master)
+## Credits
+
+This gem is based on pipedrive-ruby by @GeneralScripting. Since that gem doesn't seem active anymore and the PR's don't get merged I created this one and implemented some of the PR's needed to use the Pipedrive API. 
 
 ## Installation
 
-    gem install pipedrive-ruby
+    gem install pipedrive-api-client
 
 ## Usage
 
-    require 'pipedrive-ruby'
+    require 'pipedrive-api-client'
     Pipedrive.authenticate( YOUR_API_TOKEN )
     Pipedrive::Deal.find( DEAL_ID )
 
@@ -30,8 +29,8 @@
 You can check some of the calls at https://developers.pipedrive.com/v1
 
 
-## Contributing to pipedrive-ruby
- 
+## Contributing to pipedrive-api-client
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
 * Fork the project.
