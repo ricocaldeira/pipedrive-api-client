@@ -84,6 +84,7 @@ module Pipedrive
       end
 
       def all(response = nil, options = {}, get_absolutely_all = false)
+        update_api_token
         res = response || get(resource_path, options)
         if res.ok?
           data = res['data'].nil? ? [] : res['data'].map{|obj| new(obj)}
@@ -102,6 +103,7 @@ module Pipedrive
       end
 
       def create( opts = {} )
+        update_api_token
         res = post resource_path, :body => opts
         if res.success?
           res['data'] = opts.merge res['data']
@@ -112,11 +114,13 @@ module Pipedrive
       end
 
       def find(id)
+        update_api_token
         res = get "#{resource_path}/#{id}"
         res.ok? ? new(res) : bad_response(res,id)
       end
 
       def find_by_name(name, opts={})
+        update_api_token
         res = get "#{resource_path}/find", :query => { :term => name }.merge(opts)
         res.ok? ? new_list(res) : bad_response(res,{:name => name}.merge(opts))
       end
@@ -127,6 +131,10 @@ module Pipedrive
         klass = name.split('::').last
         klass[0] = klass[0].chr.downcase
         klass.end_with?('y') ? "/#{klass.chop}ies" : "/#{klass}s"
+      end
+
+      def update_api_token
+        default_params :api_token => Base.default_options[:default_params][:api_token]
       end
     end
   end
